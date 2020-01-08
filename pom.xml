@@ -51,6 +51,7 @@
         <module>module/fastdfs</module>
         <module>module/webdav</module>
         <module>module/local</module>
+        <module>module/local2</module>
         <module>module/mongodb</module>
         <module>module/mysql</module>
     </modules>
@@ -251,6 +252,23 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <snapshotRepository>
